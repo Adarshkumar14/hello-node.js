@@ -50,7 +50,7 @@ data:
         EKS_CLUSTER_NAME:  "your base64-encoded cluster name"
         
 ```
-- create a pod  that will setup your kafka cluster on eks
+- create a pod  that will setup your kafka cluster on eks\
   **Note:** here  *MODE* and *PLATFORM* are passed as env variable. There can be two values of MODE ,By default it is set to *setup* ,then it will setup the cluster. To cleanup the cluster change the value of MODE to *cleanup*.
 ```yaml
 apiVersion: v1
