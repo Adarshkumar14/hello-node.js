@@ -1,7 +1,7 @@
 # setup kafka cluster on EKS  Using Ansible
 Follow the steps to setup kafka cluster
 - create  k8s ServiceAccount using below code
-  ```yaml
+```yaml
   apiVersion: v1
   kind: ServiceAccount
   metadata:
@@ -38,7 +38,7 @@ subjects:
   namespace: default
   ```
 - create a k8s-secret and provide your aws credentials
-  ```yaml
+```yaml
 apiVersion: v1
 kind: Secret
 metadata:
