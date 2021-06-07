@@ -85,7 +85,7 @@ spec:
         
         ## It defines the kubectl-Kudo version
         - name: KUDO_VERSION
-          value: 
+          value: 0.12.0
 ```
 It takes few minutes to setup the kafka cluster
 
