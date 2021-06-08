@@ -87,6 +87,7 @@ data:
   </tr>
  </table>
 -  Use this Example to create litmus-kafka-deployer-pod.
+
 ```yaml
 apiVersion: v1
 kind: Pod
@@ -118,7 +119,9 @@ spec:
         ## It defines the kubectl-Kudo version
         - name: KUDO_VERSION
           value: 0.12.0
+ 
 ```
+
 It takes few minutes to setup the kafka cluster
 
 
