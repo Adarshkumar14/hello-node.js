@@ -83,8 +83,9 @@ data:
     <td> KUDO_VERSION </td>
     <td> The Kudo version to Install </td>
     <td> Optional </td>
-    <td> If KUDO_VERSION is not provided ,Bydefault It will Install the              0.12.0 version of the KUDo </td>
+    <td> If KUDO_VERSION is not provided ,Bydefault It will Install the 0.12.0 version of the KUDo </td>
   </tr>
+ </table>
 ```yaml
 apiVersion: v1
 kind: Pod
