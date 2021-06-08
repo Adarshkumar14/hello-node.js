@@ -41,7 +41,7 @@ subjects:
   namespace: default
 ```
  ### Step 2: 
-- create a k8s-secret and provide your aws credentials If your k8s-cluster is on aws-eks
+- Create a k8s-secret and provide your aws credentials If your k8s-cluster is on aws-eks
 ```yaml
 apiVersion: v1
 kind: Secret
@@ -83,10 +83,10 @@ data:
     <td> KUDO_VERSION </td>
     <td> The Kudo version to Install </td>
     <td> Optional </td>
-    <td> If KUDO_VERSION is not provided ,Bydefault It will Install the 0.12.0 version of the KUDO </td>
+    <td> If KUDO_VERSION is not provided ,By-default It will Install the 0.12.0 version of  KUDO </td>
   </tr>
  </table>
-- Use this Example to create litmus-kafka-deployer-pod.
+Use this Example to create litmus-kafka-deployer-pod.
 
 ```yaml
 apiVersion: v1
