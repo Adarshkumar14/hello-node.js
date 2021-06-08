@@ -1,7 +1,7 @@
 # Setup kafka cluster Using Ansible
 ## Follow the steps to setup kafka cluster
 ### Step:1
-- Create  k8s ServiceAccount
+- Create  k8s ServiceAccount\
  Use this sample RBAC manifest to create serviceAccount.\
  **Note:** This example have all the role permissions.You can change it to minimum  necessary role permission as per your requirement.
 ```yaml
