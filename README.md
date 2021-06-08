@@ -2,7 +2,7 @@
 ## Follow the steps to setup kafka cluster
 ### Step:1
 - Create  k8s ServiceAccount
- Use this sample RBAC manifest to create serviceAccount.
+ Use this sample RBAC manifest to create serviceAccount.\
  **Note:** This example have all the role permissions.You can change it to minimum  necessary role permission as per your requirement.
 ```yaml
 apiVersion: v1
@@ -39,7 +39,7 @@ subjects:
 - kind: ServiceAccount
   name: litmus-kafka-sa
   namespace: default
-  ```
+```
  ### Step 2: 
 - create a k8s-secret and provide your aws credentials If your k8s-cluster is on aws-eks
 ```yaml
@@ -83,10 +83,10 @@ data:
     <td> KUDO_VERSION </td>
     <td> The Kudo version to Install </td>
     <td> Optional </td>
-    <td> If KUDO_VERSION is not provided ,Bydefault It will Install the 0.12.0 version of the KUDo </td>
+    <td> If KUDO_VERSION is not provided ,Bydefault It will Install the 0.12.0 version of the KUDO </td>
   </tr>
  </table>
--  Use this Example to create litmus-kafka-deployer-pod.
+ - Use this Example to create litmus-kafka-deployer-pod.
 
 ```yaml
 apiVersion: v1
