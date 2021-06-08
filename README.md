@@ -86,7 +86,7 @@ data:
     <td> If KUDO_VERSION is not provided ,Bydefault It will Install the 0.12.0 version of the KUDO </td>
   </tr>
  </table>
- - Use this Example to create litmus-kafka-deployer-pod.
+- Use this Example to create litmus-kafka-deployer-pod.
 
 ```yaml
 apiVersion: v1
@@ -103,7 +103,6 @@ spec:
     imagePullPolicy: Always
     envFrom:
         - secretRef:
-
               name: aws-secret
     env:
         ##  It defines the mode of the experiment
