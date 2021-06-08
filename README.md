@@ -1,23 +1,25 @@
 # Setup kafka cluster Using Ansible
 ## Follow the steps to setup kafka cluster
 ### Step:1
-- create  k8s ServiceAccount using below code
+- Create  k8s ServiceAccount
+ Use this sample RBAC manifest to create serviceAccount.
+ **Note:** This example have all the role permissions.You can change it to minimum  necessary role permission as per your requirement.
 ```yaml
   apiVersion: v1
   kind: ServiceAccount
   metadata:
-    name: litmus-runner
+    name: litmus-kafka-sa
     namespace: default
     labels:
-      name: litmus-runner
+      name: litmus-kafka-sa
 ---
 
 apiVersion: rbac.authorization.k8s.io/v1beta1
 kind: ClusterRole
 metadata:
-  name: litmus-runner
+  name: litmus-kafka-sa
   labels:
-    name: litmus-runner
+    name: litmus-kafka-sa
 rules:
 - apiGroups: ["*"]
   resources: ["*"]
@@ -26,16 +28,16 @@ rules:
 apiVersion: rbac.authorization.k8s.io/v1beta1
 kind: ClusterRoleBinding
 metadata:
-  name: litmus-runner
+  name: litmus-kafka-sa
   labels:
-    name: litmus-runner
+    name: litmus-kafka-sa
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
-  name: litmus-runner
+  name: litmus-kafka-sa
 subjects:
 - kind: ServiceAccount
-  name: litmus-runner
+  name: litmus-kafka-sa
   namespace: default
   ```
  ### Step 2: 
@@ -53,19 +55,47 @@ data:
         
 ```
 ### Step 3:
-- create a pod  that will setup your kafka cluster\
-  **Note:** here  *MODE* and *PLATFORM* *KUDO_VERSION* are passed as env variable. There can be two values of MODE ,By default it is set to *setup* ,then it will setup the cluster. To cleanup the cluster change the value of MODE to *cleanup*.
+- Create a litmus-kafka-deployer pod  that will setup your kafka cluster\
+ #### Supported ENV variables
+ <table>
+    <tr>
+      <th> Variables </th>
+      <th> Description </th>
+      <th> Specify In Pod </th>
+      <th> Notes </th>
+  </tr>
+  <tr>
+    <td> MODE </td>
+    <td> It defines the mode of experiment </td>
+    <td> Required </td>
+    <td> It supports two value <br/>
+         MODE: setup <br/>
+         MODE: cleanup </td>
+  </tr>
+  <tr>
+    <td> PLATFORM </td>
+    <td> It defines the platform of the k8s cluster </td>
+    <td> Optional </td>
+    <td> Currently it supports only eks cluster <br/>
+          PLATFORM: eks </td>
+  </tr>
+  <tr>
+    <td> KUDO_VERSION </td>
+    <td> The Kudo version to Install </td>
+    <td> Optional </td>
+    <td> If KUDO_VERSION is not provided ,Bydefault It will Install the              0.12.0 version of the KUDo </td>
+  </tr>
 ```yaml
 apiVersion: v1
 kind: Pod
 metadata:
-  name: myapp-pod
+  name: litmus-kafka-deployer
   labels:
-    app: myapp
+    app: litmus-kafka-deployer
 spec:
-  serviceAccountName: litmus-runner
+  serviceAccountName: litmus-kafka-sa
   containers:
-  - name: myapp-container
+  - name: litmus-kafka-deployer-container
     image: litmuschaos/kafka-deployer:latest
     imagePullPolicy: Always
     envFrom:
