@@ -55,7 +55,7 @@ data:
         
 ```
 ### Step 3:
-- Create a litmus-kafka-deployer pod  that will setup your kafka cluster\
+- Create a litmus-kafka-deployer pod  that will setup your kafka cluster
  #### Supported ENV variables
  <table>
     <tr>
@@ -86,6 +86,7 @@ data:
     <td> If KUDO_VERSION is not provided ,Bydefault It will Install the 0.12.0 version of the KUDo </td>
   </tr>
  </table>
+ -  Use this Example to create litmus-kafka-deployer-pod.
 ```yaml
 apiVersion: v1
 kind: Pod
