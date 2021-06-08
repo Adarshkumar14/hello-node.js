@@ -5,9 +5,9 @@
  Use this sample RBAC manifest to create serviceAccount.
  **Note:** This example have all the role permissions.You can change it to minimum  necessary role permission as per your requirement.
 ```yaml
-  apiVersion: v1
-  kind: ServiceAccount
-  metadata:
+apiVersion: v1
+kind: ServiceAccount
+metadata:
     name: litmus-kafka-sa
     namespace: default
     labels:
@@ -86,7 +86,7 @@ data:
     <td> If KUDO_VERSION is not provided ,Bydefault It will Install the 0.12.0 version of the KUDo </td>
   </tr>
  </table>
- -  Use this Example to create litmus-kafka-deployer-pod.
+-  Use this Example to create litmus-kafka-deployer-pod.
 ```yaml
 apiVersion: v1
 kind: Pod
