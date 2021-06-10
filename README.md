@@ -66,7 +66,7 @@ data:
   </tr>
   <tr>
     <td> MODE </td>
-    <td> It defines the mode of experiment </td>
+    <td> Provide <code>setup</code> to setup kafka cluster and <code>cleanup</code> for uninstallation </td>
     <td> Required </td>
     <td> It supports two value <br/>
          MODE: setup <br/>
@@ -74,14 +74,14 @@ data:
   </tr>
   <tr>
     <td> PLATFORM </td>
-    <td> It defines the platform of the k8s cluster </td>
+    <td>  provide the target platform  name. Like <code>eks</code> </td>
     <td> Optional </td>
     <td> Currently it supports only eks cluster <br/>
           PLATFORM: eks </td>
   </tr>
   <tr>
     <td> KUDO_VERSION </td>
-    <td> The Kudo version to Install </td>
+    <td> Provide the Kudo version for kafka Installation  </td>
     <td> Optional </td>
     <td> If KUDO_VERSION is not provided ,By-default It will Install the 0.12.0 version of  KUDO </td>
   </tr>
