@@ -87,7 +87,7 @@ data:
   </tr>
   <tr>
    <td> KAFKA_NS </td>
-   <td> Provide the  name of namespace for kafka </td>
+   <td> Provide the namespace for kafka </td>
    <td> Required</td>
    <td> Example: <br/>
          KAFKA_NS: kafka</td>
