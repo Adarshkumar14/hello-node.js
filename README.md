@@ -90,7 +90,7 @@ data:
    <td> Provide the namespace for kafka </td>
    <td> Required</td>
    <td> Example: <br/>
-         KAFKA_NS: kafka</td>
+         KAFKA_NS: kafka </td>
  </tr> 
  </table>
 Use this Example to create litmus-kafka-deployer-pod.
