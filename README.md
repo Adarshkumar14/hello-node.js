@@ -74,7 +74,7 @@ data:
   </tr>
   <tr>
     <td> PLATFORM </td>
-    <td>  provide the target platform  name. Like <code>eks</code> </td>
+    <td>  Provide the target platform  name. Like <code>eks</code> </td>
     <td> Optional </td>
     <td> Currently it supports only eks cluster <br/>
           PLATFORM: eks </td>
@@ -85,6 +85,13 @@ data:
     <td> Optional </td>
     <td> If KUDO_VERSION is not provided ,By-default It will Install the 0.12.0 version of  KUDO </td>
   </tr>
+  <tr>
+   <td> KAFKA_NS </td>
+   <td> Provide the  name of namespace for kafka </td>
+   <td> Required</td>
+   <td> Example: <br/>
+         KAFKA_NS: kafka</td>
+ </tr> 
  </table>
 Use this Example to create litmus-kafka-deployer-pod.
 
@@ -118,10 +125,11 @@ spec:
         ## It defines the kubectl-Kudo version
         - name: KUDO_VERSION
           value: 0.12.0
+          
+        ## Name of namespace where kafka will be installed
+        - name: KAFKA_NS
+          value: "kafka" 
  
 ```
 
 It takes few minutes to setup the kafka cluster
-
-
-        
