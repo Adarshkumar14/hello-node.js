@@ -85,7 +85,13 @@ data:
     <td> Optional </td>
    <td> If KUDO_VERSION is not provided ,By-default It will Install the 0.12.0 version of  KUDO </td>
   </tr>
-
+  <tr>
+   <td> KAFKA_NAMESPACE </td>
+   <td> Provide the namespace for kafka </td>
+   <td> Required</td>
+   <td> Example: <br/>
+        KAFKA_NAMESPACE: kafka </td>
+ </tr>
  </table>
 Use this Example to create litmus-kafka-deployer-pod.
 
