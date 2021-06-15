@@ -97,14 +97,14 @@ data:
   <td> Provide the namespace for prometheus and grafana </td>
   <td> Required </td>
   <td> Example: <br/>
-   <code> MONITORING_NAMESPACE: monitoring  </code><td/>
+   <code> MONITORING_NAMESPACE: monitoring</code><td/>
  </tr>
  <tr>
   <td> LITMUS_GIT_TAG </td>
   <td> Provide the tag of LITMUS github Repository </td>
   <td> Required </td>
   <td> Example: <br/>
-   <code> LITMUS_GIT_TAG: 2.0.0-Beta7  </code></td>
+   <code> LITMUS_GIT_TAG: 2.0.0-Beta7</code></td>
  </tr>
  </table>
 Use this Example to create litmus-kafka-deployer-pod.
