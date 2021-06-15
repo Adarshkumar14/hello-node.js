@@ -83,7 +83,7 @@ data:
     <td> KUDO_VERSION </td>
     <td> Provide the Kudo version for kafka Installation  </td>
     <td> Optional </td>
-   <td> If KUDO_VERSION is not provided ,By-default It will Install the <code> 0.12.0  </code> version of  KUDO </td>
+   <td> If KUDO_VERSION is not provided ,By-default It will Install the 0.12.0 version of  KUDO </td>
   </tr>
   <tr>
    <td> KAFKA_NAMESPACE </td>
