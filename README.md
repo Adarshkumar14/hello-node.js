@@ -86,12 +86,26 @@ data:
     <td> If KUDO_VERSION is not provided ,By-default It will Install the 0.12.0 version of  KUDO </td>
   </tr>
   <tr>
-   <td> KAFKA_NS </td>
+   <td> KAFKA_NAMESPACE </td>
    <td> Provide the namespace for kafka </td>
    <td> Required</td>
    <td> Example: <br/>
-         KAFKA_NS: kafka </td>
+         KAFKA_NAMESPACE: kafka </td>
  </tr> 
+ <tr>
+  <td> MONITORING_NAMESPACE </td>
+  <td> Provide the namespace for prometheus and grafana </td>
+  <td> Required </td>
+  <td> Example: <br/>
+       MONITORING_NAMESPACE: monitoring <td/>
+ </tr>
+ <tr>
+  <td> LITMUS_GIT_TAG </td>
+  <td> Provide the tag of LITMUS github Repository </td>
+  <td> Required </td>
+  <td> Example: <br/>
+   LITMUS_GIT_TAG: 2.0.0-Beta7 </td>
+ </tr>
  </table>
 Use this Example to create litmus-kafka-deployer-pod.
 
@@ -127,8 +141,17 @@ spec:
           value: 0.12.0
           
         ## Name of namespace where kafka will be installed
-        - name: KAFKA_NS
-          value: "kafka" 
+        - name: KAFKA_NAMESPACE
+          value: "kafka"
+
+        ## Name of namespace where prometheus and grafana will be installed
+        - name: MONITORING_NAMESPACE
+          value: "monitoring"
+
+        ## Tag of LITMUS Repository that will be clone
+        - name: LITMUS_GIT_TAG
+          value: 2.0.0-Beta7
+
  
 ```
 
