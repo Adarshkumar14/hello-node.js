@@ -92,6 +92,13 @@ data:
    <td> Example: <br/>
         KAFKA_NAMESPACE: kafka </td>
  </tr>
+  <tr>
+  <td> MONITORING_NAMESPACE </td>
+  <td> Provide the namespace for prometheus and grafana </td>
+  <td> Required </td>
+  <td> Example: <br/>
+   MONITORING_NAMESPACE: monitoring<td/>
+ </tr>
  </table>
 Use this Example to create litmus-kafka-deployer-pod.
 
