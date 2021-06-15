@@ -69,15 +69,15 @@ data:
     <td> Provide <code>setup</code> to setup kafka cluster and <code>cleanup</code> for uninstallation </td>
     <td> Required </td>
     <td> It supports two value <br/>
-     <code> MODE: setup </code> <br/>
-     <code> MODE: cleanup  </code></td>
+         MODE: setup <br/>
+         MODE: cleanup </td>
   </tr>
   <tr>
     <td> PLATFORM </td>
     <td>  Provide the target platform  name. Like <code>eks</code> </td>
     <td> Optional </td>
     <td> Currently it supports only eks cluster <br/>
-     <code> PLATFORM: eks  </code></td>
+      PLATFORM: eks</td>
   </tr>
   <tr>
     <td> KUDO_VERSION </td>
@@ -90,21 +90,21 @@ data:
    <td> Provide the namespace for kafka </td>
    <td> Required</td>
    <td> Example: <br/>
-        <code> KAFKA_NAMESPACE: kafka </code></td>
+        KAFKA_NAMESPACE: kafka </td>
  </tr> 
  <tr>
   <td> MONITORING_NAMESPACE </td>
   <td> Provide the namespace for prometheus and grafana </td>
   <td> Required </td>
   <td> Example: <br/>
-   <code> MONITORING_NAMESPACE: monitoring</code><td/>
+   MONITORING_NAMESPACE: monitoring<td/>
  </tr>
  <tr>
   <td> LITMUS_GIT_TAG </td>
   <td> Provide the tag of LITMUS github Repository </td>
   <td> Required </td>
   <td> Example: <br/>
-   <code> LITMUS_GIT_TAG: 2.0.0-Beta7</code></td>
+   LITMUS_GIT_TAG: 2.0.0-Beta7</td>
  </tr>
  </table>
 Use this Example to create litmus-kafka-deployer-pod.
