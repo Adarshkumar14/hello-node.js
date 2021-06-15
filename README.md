@@ -101,7 +101,7 @@ data:
  </tr>
   <tr>
   <td> LITMUS_GIT_TAG </td>
-  <td> Provide the tag of LITMUS github Repository </td>
+  <td> Provide the tag of Litmus github Repository </td>
   <td> Required </td>
   <td> Example: <br/>
    LITMUS_GIT_TAG: 2.0.0-Beta7</td>
